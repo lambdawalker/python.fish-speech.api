@@ -88,11 +88,15 @@ HTTP fixture and do not require a running model or GPU. CI tests Python 3.10,
 
 ## Releases
 
-Initial version: `0.1.0`. Publishing a GitHub release tagged `v0.1.0` triggers
-validation, builds a wheel and source distribution, and publishes via PyPI
-Trusted Publishing. Configure the publisher first; see
-[release setup and instructions](docs/releasing.md). No PyPI API token is needed.
-The repository setup itself does not publish a release.
+First planned version: `0.1.0`. Conventional Commits on `main` let Release Please
+prepare version/changelog PRs. Merging a release PR creates the tag/release,
+validates the exact source, and publishes through PyPI Trusted Publishing.
+The final job verifies the public files and a clean installation.
+
+Configure the publisher and GitHub settings first; see
+[automated publishing and recovery](docs/publishing.md). No PyPI API token is
+needed. Release PRs are not auto-merged, and setting up the workflow itself
+does not upload a package.
 
 ## License
 

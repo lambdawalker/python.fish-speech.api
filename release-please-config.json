@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "8510bf4ec4e0671b4a3e6c4df3a21df5cc351644",
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "package-name": "fish-speech-api",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true,
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "extra-files": [
+        {
+          "type": "toml",
+          "path": "uv.lock",
+          "jsonpath": "$.package[?(@.name.value == 'fish-speech-api')].version"
+        }
+      ]
+    }
+  }
+}
